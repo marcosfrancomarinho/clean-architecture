@@ -6,7 +6,7 @@ token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImlhdCI6MTc0Mzk2ODQ1O
 {
     "name":"julio",
     "email":"julio@gmail.com",
-    "password":"@Xlr81998"
+    "password:"123"
 }
 
 ###
@@ -15,5 +15,5 @@ Content-Type: application/json
 
 {
     "email":"marcos@gmail.com",
-    "password":"@Xlr81998"
+    "password":"123"
 }
