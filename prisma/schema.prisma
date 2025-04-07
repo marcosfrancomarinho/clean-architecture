@@ -15,17 +15,5 @@ model User {
   name     String
   email    String     @unique
   password String
-  InfoUser InfoUser[]
 }
 
-enum Gender {
-  masculino
-  femenino
-}
-
-model InfoUser {
-  id        Int     @id
-  gender    Gender?
-  avatarUrl String?
-  user      User    @relation(fields: [id], references: [id], onDelete: Cascade)
-}

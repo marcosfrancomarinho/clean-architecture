@@ -1,7 +1,7 @@
 ###
 POST http://localhost:8080/register
 Content-Type: application/json
-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImlhdCI6MTc0Mzk2ODQ1OX0.cJfYHv2VDOIkRHAfGrflXurBgzgHNQoDv39OnIhk2VI
+
 
 {
     "name":"julio",
