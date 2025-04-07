@@ -5,5 +5,5 @@ build({
   minify: true,
   bundle: true,
   target: ['ES2016'],
-  external: ['express', 'tsyringe', 'reflect-metadata', 'prisma', '@prisma/client', 'bcrypt', 'jsonwebtoken'],
+  external: ['express', 'tsyringe', 'reflect-metadata', 'prisma', '@prisma/client', 'bcrypt', 'jsonwebtoken', 'cors'],
 });
