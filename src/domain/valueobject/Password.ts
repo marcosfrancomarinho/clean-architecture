@@ -20,7 +20,7 @@ export class Password {
       if (!regex.test(password.trim())) throw new Error(`/password ${type}/ ${message}`);
     }
   }
-  public get value(): string {
+  public getValue(): string {
     return this.password;
   }
 }

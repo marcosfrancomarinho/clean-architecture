@@ -25,13 +25,12 @@ export class LoginUseCase implements ILoginUseCase {
 
     const userLogin: UserLogin = UserLogin.create(email, passoword);
     const userClient: UserLogin | null = await this.login.list(userLogin);
-
+  
     if (!userClient) throw new Error('incorrect password or email');
-
-    await userClient.compare(passoword, userClient.passwordEncode, this.hasher);
+    await userClient.compare(userLogin.getPassword(), userClient.getPassword(), this.hasher);
 
     const token: Token = this.authService.genereteToken(userClient);
-    const tokenClient: OutputLoginUserDTO = { token: token.value };
+    const tokenClient: OutputLoginUserDTO = { token: token.getValue() };
     return tokenClient;
   }
 }

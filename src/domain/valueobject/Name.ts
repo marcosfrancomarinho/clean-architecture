@@ -11,7 +11,7 @@ export class Name {
     const checking: boolean = regex.test(name.trim());
     if (!checking) throw new Error('invalid name');
   }
-  public get value(): string {
+  public getValue(): string {
     return this.name;
   }
 }

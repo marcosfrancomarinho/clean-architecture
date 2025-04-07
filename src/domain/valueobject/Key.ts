@@ -11,7 +11,7 @@ export class Key {
     if (!key || key.trim().length === 0) throw new Error('Secret key invalid or not found');
   }
 
-  public get value(): string {
+  public getValue(): string {
     return this.key;
   }
 }

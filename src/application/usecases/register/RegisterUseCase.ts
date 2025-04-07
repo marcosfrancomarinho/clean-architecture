@@ -17,9 +17,11 @@ export class RegisterUseCase implements IRegisterUseCase {
     const name: Name = Name.create(inputRegisterUser.name);
     const email: Email = Email.create(inputRegisterUser.email);
     const passoword: Password = Password.create(inputRegisterUser.password);
+
     const userRegister: UserRegister = await UserRegister.create(name, email, passoword, this.hasher);
     const ID: UserId = await this.register.save(userRegister);
-    const userId: OutputRegisterUserDTO = { id: ID.value };
+    
+    const userId: OutputRegisterUserDTO = { id: ID.getValue() };
     return userId;
   }
 }

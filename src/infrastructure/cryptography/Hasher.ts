@@ -6,12 +6,12 @@ import bcrypt from 'bcrypt';
 @injectable()
 export class Hasher implements IHasher {
   public async compare(passoword: Password, encrypt: Password): Promise<boolean> {
-    const checking: boolean = await bcrypt.compare(passoword.value, encrypt.value);
+    const checking: boolean = await bcrypt.compare(passoword.getValue(), encrypt.getValue());
     return checking;
   }
   public async encrypt(passoword: Password): Promise<Password> {
     const salt: number = 10;
-    const hash: string = await bcrypt.hash(passoword.value, salt);
+    const hash: string = await bcrypt.hash(passoword.getValue(), salt);
     return Password.create(hash);
   }
 }

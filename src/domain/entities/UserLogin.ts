@@ -14,14 +14,15 @@ export class UserLogin {
     const checking: boolean = await hasher.compare(passoword, encrypt);
     if (!checking) throw new Error('incorrect password or email');
   }
-  public get passwordEncode(): Password {
+  
+
+  public getPassword(): Password {
     return this.password;
   }
-  public get value() {
-    return {
-      email: this.email.value,
-      password: this.password.value,
-      userId: this.userId?.value,
-    };
+  public getUserId(): number {
+    return this.userId?.getValue() as number;
+  }
+  public getEmail(): string {
+    return this.email.getValue();
   }
 }

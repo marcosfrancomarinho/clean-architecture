@@ -1,4 +1,3 @@
-import { Token } from '../../../domain/valueobject/Token';
 
 export type InputLoginUserDTO = {
   email: string;

@@ -4,6 +4,7 @@ import { inject, injectable } from 'tsyringe';
 import { LoginUseCase } from '../../../application/usecases/login/LoginUseCase';
 import { ILoginUseCase } from '../../../application/usecases/login/ILoginUseCase';
 
+
 @injectable()
 export class LoginControllers implements ILoginControllers {
   public constructor(@inject(LoginUseCase) private loginUser: ILoginUseCase) {}

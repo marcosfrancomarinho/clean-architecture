@@ -9,7 +9,7 @@ export class UserId {
   private static validate(id: number) {
     if (!id || isNaN(id)) throw new Error('invalid id');
   }
-  public get value(): number {
+  public getValue(): number {
     return this.id;
   }
 }

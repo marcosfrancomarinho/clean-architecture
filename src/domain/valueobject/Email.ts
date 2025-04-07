@@ -12,7 +12,7 @@ export class Email {
     if (!checking) throw new Error('invalid email');
   }
 
-  public get value(): string {
+  public getValue(): string {
     return this.email;
   }
 }

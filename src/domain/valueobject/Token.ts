@@ -8,7 +8,7 @@ export class Token {
   private static validate(token: string): void {
     if (!token || token.trim().length === 0) throw new Error('Invalid token');
   }
-  public get value(): string {
+  public getValue(): string {
     return this.token;
   }
 }
