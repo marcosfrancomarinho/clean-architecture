@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "tsx --env-file=.env --watch src/main.ts",
     "type": "tsc --watch --noEmit",
-    "build": "node esbuild.config.js && prisma generate && prisma migrate dev --name start && prisma studio",
+    "build": "prisma generate && prisma migrate dev --name start && node esbuild.config.js",
     "start": "node --env-file=.env dist/bundle.js"
   },
   "dependencies": {
